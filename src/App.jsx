@@ -30,7 +30,11 @@ function Callendar() {
   const [date, setDate] = useState(new Date());
   return (
     <section className="calendar">
-      <Calendar onChange={setDate} value={date} />
+      <Calendar 
+        onChange={setDate} 
+        value={date} 
+        showNeighboringMonth={false}
+      />
     </section>
   )
 }
