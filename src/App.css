@@ -196,7 +196,18 @@ header li {
 }
 
 .invest h2 {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+.eb5-project {
+  display: inline-block;
+  width: 20%;
+  height: 30%;
+  margin: 15px;
+  background-color: dodgerblue;
+  line-height: 150px;
+  font-size: 1.5rem;
 }
 
 

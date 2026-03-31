@@ -88,6 +88,12 @@ function Invest() {
     // 미국 투자이민 프로젝트 컴포넌트
     <section className="invest">
       <h2>미국 투자이민 프로젝트</h2>
+      <div className='eb5-project'>프로젝트01</div>
+      <div className='eb5-project'>프로젝트02</div>
+      <div className='eb5-project'>프로젝트03</div>
+      <div className='eb5-project'>프로젝트04</div>
+      <div className='eb5-project'>프로젝트05</div>
+      <div className='eb5-project'>프로젝트06</div>
     </section>
   )
 }
