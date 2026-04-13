@@ -191,23 +191,37 @@ header li {
 }
 
 /* 미국 투자이민 프로젝트 컴포넌트 */
-.invest {
-  text-align: center;
+.invest ul {
+  width: 100%;
+  height: 200px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.invest ul li {
+  min-width: 30%;
+  height: 100%;
+  background-color: blue;
+  margin-right: 20px;
+  padding: 12px 20px;
 }
 
-.invest h2 {
-  margin-top: 30px;
-  font-size: 2rem;
+.rolling-wrap {
+  overflow: hidden;
+  width: 100%;
 }
 
-.eb5-project {
-  display: inline-block;
-  width: 20%;
-  height: 30%;
-  margin: 15px;
-  background-color: dodgerblue;
-  line-height: 150px;
-  font-size: 1.5rem;
+.rolling-list {
+  animation: rolling 20s linear infinite;
+}
+
+@keyframes rolling {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 

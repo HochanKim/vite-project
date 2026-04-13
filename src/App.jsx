@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import companyLogo from '../src/assets/companyLogo.png'
 // 달력 불러오기
 import Calendar from 'react-calendar'
@@ -34,6 +34,8 @@ function Callendar() {
         onChange={setDate} 
         value={date} 
         showNeighboringMonth={false}
+        // 달력 날짜 포맷 설정 ('~일'을 제외한 숫자만 표시)
+        formatDay={(locale, date) => date.getDate()}
       />
     </section>
   )
@@ -54,7 +56,6 @@ function SlideBanner() {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 5000) // 5초마다 배너 전환
-
     return () => clearInterval(interval)
   }, [])
 
@@ -84,17 +85,52 @@ function SlideBanner() {
 }
 
 function Invest() {
+  // 미국 투자이민 프로젝트 컴포넌트
+  const projects = [
+    'EB-5 프로젝트 01',
+    'EB-5 프로젝트 02',
+    'EB-5 프로젝트 03',
+    'EB-5 프로젝트 04',
+    'EB-5 프로젝트 05',
+  ]
+
+  const items = [...projects, ...projects] // 같은 항목을 두 번 반복
+
   return (
-    // 미국 투자이민 프로젝트 컴포넌트
     <section className="invest">
       <h2>미국 투자이민 프로젝트</h2>
-      <div className='eb5-project'>프로젝트01</div>
-      <div className='eb5-project'>프로젝트02</div>
-      <div className='eb5-project'>프로젝트03</div>
-      <div className='eb5-project'>프로젝트04</div>
-      <div className='eb5-project'>프로젝트05</div>
-      <div className='eb5-project'>프로젝트06</div>
+      <div className="rolling-wrap">
+        <ul className="rolling-list">
+          {items.map((text, index) => (
+            <li key={index} className="eb5-project">
+              {text}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
+  )
+}
+
+function Types() {
+  // 이민 프로그램 영역
+  const IminData = [
+    { id: 1, en: "Traveling with pets", ko: "반려동물", bgColor: "#80CAFF"},
+    { id: 2, en: "Airport lounge", ko: "공항 라운지", bgColor: "#5D4037"},
+    { id: 3, en: "Shopping", ko: "쇼핑", bgColor: "#A29BFE"},
+    { id: 4, en: "Restaurant", ko: "식당", bgColor: "#74B9FF"}
+  ];
+
+  return (
+    <>
+    <div className="nav-card" style={{ backgroundColor: bgColor }}>
+      <img src={img} alt={ko} className="card-image" />
+      <div className="text-wrapper">
+        <span className="text-en">{en}</span>
+        <h3 className="text-ko">{ko}</h3>
+      </div>
+    </div>
+    </>
   )
 }
 
@@ -108,6 +144,7 @@ function App() {
           <SlideBanner />
         </div>
         <Invest />
+        <Types />
       </div>
     </>
   )
