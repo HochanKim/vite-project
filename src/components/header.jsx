@@ -1,6 +1,6 @@
 import { useState, useEffect, use } from 'react'
 import companyLogo from '../assets/companyLogo.png'
-import menuData from '../data/menuData'
+import menuData from '../data/menuData.js'
 import { Link } from "react-router-dom"
 
 function Header() {

@@ -1,3 +1,4 @@
+ // 헤더 영역의 메뉴들의 데이터 매핑 모음 ('Header.jsx'에서 사용)
 const menuData = [
   {
     // 헤더 1st 메인 메뉴
