@@ -5,9 +5,18 @@ const menuData = [
     title: "회사소개",
     link: "/company",
     subMenus: [
-      "연혁",
-      "찾아오시는 길",
-      "전문가 소개"
+      {
+        title: "연혁",
+        link: "/company/history"
+      },
+      {
+        title: "찾아오시는 길",
+        link: "/company/location"
+      },
+      {
+        title: "전문가 소개",
+        link: "/company/expert"
+      }
     ]
   },
   {
@@ -16,10 +25,22 @@ const menuData = [
     title: "투자이민 프로젝트",
     link: "/project",
     subMenus: [
-      "AAEB5",
-      "Bether Capital",
-      "EB5Capital",
-      "EB5AN",
+      {
+        title: "AAEB5",
+        link: "/eb5/partners01"
+      },
+      {
+        title: "Bether Capital",
+        link: "/eb5/partners02"
+      },
+      {
+        title: "EB5Capital",
+        link: "/eb5/partners03"
+      },
+      {
+        title: "EB5AN",
+        link: "/eb5/partners04"
+      },
     ]
   },
   {
@@ -28,12 +49,30 @@ const menuData = [
     title: "국가별 이민 안내",
     link: "/country",
     subMenus: [
-      "미국",
-      "캐나다",
-      "유럽",
-      "아시아",
-      "오세아니아",
-      "중남미/카리브해"
+      {
+        title: "미국",
+        link: "/region/usa"
+      },
+      {
+        title: "캐나다",
+        link: "/region/canada"
+      },
+      {
+        title: "유럽",
+        link: "/region/europe"
+      },
+      {
+        title: "아시아",
+        link: "/region/asia"
+      },
+      {
+        title: "오세아니아",
+        link: "/region/oceania"
+      },
+      {
+        title: "중남미/카리브해",
+        link: "/region/latin-america"
+      }
     ]
   },
   {
@@ -42,12 +81,30 @@ const menuData = [
     title: "성공 사례",
     link: "/country",
     subMenus: [
-      "투자이민 수속",
-      "전문가 이민 수속",
-      "취업이민 수속",
-      "유럽이민 수속",
-      "거주비자 수속",
-      "시민권 수속"
+      {
+        title: "투자이민 수속",
+        link: "/success/investment"
+      },
+      {
+        title: "전문가 이민 수속",
+        link: "/success/expert"
+      },
+      {
+        title: "취업이민 수속",
+        link: "/success/employment"
+      },
+      {
+        title: "유럽이민 수속",
+        link: "/success/europe"
+      },
+      {
+        title: "거주비자 수속",
+        link: "/success/residence"
+      },
+      {
+        title: "시민권 수속",
+        link: "/success/citizenship"
+      }
     ]
   },
   {
@@ -56,9 +113,18 @@ const menuData = [
     title: "고객센터",
     link: "/country",
     subMenus: [
-      "공지사항",
-      "제휴 문의",
-      "행사 신청",
+      {
+        title: "공지사항",
+        link: "/support/notice"
+      },
+      {
+        title: "제휴 문의",
+        link: "/support/partnership"
+      },
+      {
+        title: "행사 신청",
+        link: "/support/event"
+      }
     ]
   },
 ];
