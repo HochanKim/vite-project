@@ -1,5 +1,5 @@
 import { useState, useEffect, use } from 'react'
-import './App.css'
+import './style/App.css'
 import Header from './components/Header.jsx' // 헤더 추가
 import MainPage from './pages/Index.jsx' // 메인 페이지 추가
 

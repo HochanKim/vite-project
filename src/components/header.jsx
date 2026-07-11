@@ -6,21 +6,26 @@ import { Link } from "react-router-dom"
 function Header() {
   // 헤더 컴포넌트
   return (
-    <header>
-      <div className='
-         w-9/10 
+    <header className={
+        `max-w-full`
+      }
+    >
+      <div className={
+        `w-9/10 
          mx-auto 
          flex 
          items-center 
-         justify-between py-4'
+         justify-between py-4`
+       }
       >
         {/* 회사 로고 */}
         <Link to="/" className='shrink-0'>
           <img src={companyLogo} 
               alt="Company Logo" 
-              className='
-              w-56
-              cursor-pointer'
+              className={
+                `w-56
+                cursor-pointer`
+              }
           />
         </Link>
         
@@ -83,9 +88,10 @@ function Header() {
                       block
                       px-4 
                       py-2
-                      hover:text-blue-500 font-semibold
+                      font-medium
+                    hover:text-blue-500
                       transition-colors
-                      duration-100'
+                      duration-300'
                     >
                       {subMenu.title}
                     </Link>
