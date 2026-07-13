@@ -9,6 +9,7 @@ function MainPage() {
             <MyBanner />
             <div className='
                 w-9/10
+                h-screen
                 mx-auto'
             >
                 <h1>Main Page</h1>

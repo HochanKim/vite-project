@@ -1,4 +1,4 @@
-// 이미지, 비디오 등 콘텐츠 불러오기
+// 이미지, 비디오 등 컨텐츠 불러오기
 import mainBanner01 from '../assets/main/usa_main01.mp4';
 
 const slideBanners = [

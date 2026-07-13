@@ -1,5 +1,5 @@
 import React from 'react';
-import slideBanners from '../../data/slideBanner.js';  // 슬라이드 배너에 적용할 콘텐츠 파일
+import slideBanners from '../../data/slideBanner.js';  // 슬라이드 배너에 적용할 컨텐츠 파일
 
 // ①  필요한 swiper 컴포넌트 가져오기
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -44,10 +44,10 @@ function MyBanner() {
 
             navigation={false} // 이전/다음 버튼 사용 여부
             pagination={{ clickable: true }} // 페이지 버튼 사용 여부
-            // autoplay={{
-            //     delay: 5000, // 5초마다 자동 슬라이드
-            //     disableOnInteraction: false, // 사용자가 드래그해도 자동 재생 유지
-            // }}
+            autoplay={{
+                delay: 5000, // 5초마다 자동 슬라이드
+                disableOnInteraction: false, // 사용자가 드래그해도 자동 재생 유지
+            }}
             className={`${bannerHeight}
                 mySwiper`
             }
@@ -59,6 +59,7 @@ function MyBanner() {
                         relative
                     `}
                 >
+                    {/* 컨텐츠 영역 (이미지 or 비디오) */}
                     {banner.type === "image" 
                      ? (
                     // type값이 "image"와 일치할 경우
@@ -83,6 +84,19 @@ function MyBanner() {
                             />
                         )
                     }
+                    {/* 네이비 그라데이션 */}
+                    <div
+                        className="
+                            absolute
+                            inset-0
+
+                            bg-gradient-to-r
+                            from-[#0B1F33]/80
+                            via-[#0B1F33]/50
+                            to-transparent
+                        "
+                    />
+                    {/* 배너 위 텍스트 영역 */}
                     <div className={`
                             absolute
                             left-20
@@ -96,7 +110,7 @@ function MyBanner() {
                             mt-0
                             mb-8
                         `}>
-                            <span className={`text-[#BD9565]`}>프리미엄</span> 이민 컨설팅
+                            <span className="text-[#BD9565] text-shadow">프리미엄</span> 이민 컨설팅
                         </p>
                         <p className={`${bannerText02}`}>
                             30년 이상 전문성과 신뢰로
