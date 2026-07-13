@@ -6,8 +6,13 @@ import { Link } from "react-router-dom"
 function Header() {
   // 헤더 컴포넌트
   return (
-    <header className={
-        `max-w-full`
+    <header className={`
+        max-w-full
+        h-20
+        fixed
+        inset-0
+        z-100
+        bg-white/60`
       }
     >
       <div className={
