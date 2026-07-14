@@ -1,7 +1,7 @@
-import { useState, useEffect, use } from 'react'
-import companyLogo from '../assets/companyLogo.png'
-import menuData from '../data/menuData.js'
-import { Link } from "react-router-dom"
+import { useState, useEffect, use } from 'react';
+import companyLogo from '../../assets/companyLogo.png';
+import menuData from '../../data/menuData.js';
+import { Link } from "react-router-dom";
 
 function Header() {
   // 헤더 컴포넌트
@@ -15,8 +15,8 @@ function Header() {
         bg-white/60`
       }
     >
-      <div className={
-        `w-9/10 
+      <div className={`
+         w-9/10 
          mx-auto 
          flex 
          items-center 
@@ -116,7 +116,7 @@ function Header() {
            font-bold
            whitespace-nowrap'
           >
-            &#9742; 02-564-8888
+            &#9742; 02-549-5993
           </span>
         </div>
       </div>

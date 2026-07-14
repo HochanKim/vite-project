@@ -13,6 +13,8 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 // ④ CSS 설정
+import '../../style/App.css';
+
 const bannerHeight = `
     w-full
     h-screen` /* h-screen = 'height: 100vh;' */;
@@ -30,8 +32,6 @@ const bannerText02 =`
     text-2xl
     leading-8
 `;
-
-import '../../style/App.css';
 
 function MyBanner() {
     return (
@@ -52,6 +52,7 @@ function MyBanner() {
                 mySwiper`
             }
         >
+            {/* 슬라이드 배너 영역 */}
             {slideBanners.map((banner) => (
                 <SwiperSlide 
                     key={banner.id}
@@ -60,11 +61,19 @@ function MyBanner() {
                     `}
                 >
                     {/* 컨텐츠 영역 (이미지 or 비디오) */}
-                    {banner.type === "image" 
+                    {banner.type === "image"
                      ? (
                     // type값이 "image"와 일치할 경우
                             <img src={banner.src} 
-                                alt={banner.type} 
+                                alt={banner.type}
+                                className={`
+                                  w-full
+                                  h-full
+                                  absolute
+                                  inset-0
+                                  object-cover
+                                  object-center
+                                `}
                             />
                     ) : (
                     // type값이 "image"와 다를 경우
@@ -90,55 +99,92 @@ function MyBanner() {
                             absolute
                             inset-0
 
-                            bg-gradient-to-r
-                            from-[#0B1F33]/80
+                            bg-linear-to-r
+                            from-[#0B1F33]/90
                             via-[#0B1F33]/50
                             to-transparent
                         "
                     />
-                    {/* 배너 위 텍스트 영역 */}
+
+                    {/* 배너 위 텍스트 영역 - 첫 번째 */}
                     <div className={`
                             absolute
                             left-20
                             bottom-40
                         `}>
                         <p className={`${bannerText01}`}>
-                            글로벌 자산과 미래를 잇는
+                            {banner.id1_title01}
                         </p>
                         <p className={`
                             ${bannerText01}
                             mt-0
                             mb-8
                         `}>
-                            <span className="text-[#BD9565] text-shadow">프리미엄</span> 이민 컨설팅
+                            <span className="text-[#BD9565] text-shadow">{banner.id1_highlight}</span> {banner.id1_title02}
                         </p>
                         <p className={`${bannerText02}`}>
-                            30년 이상 전문성과 신뢰로
+                            {banner.id1_text01}
                         </p>
                         <p className={`${bannerText02}`}>
-                            고객의 성공적인 글로벌 라이프를 함께합니다.
+                            {banner.id1_text02}
+                        </p>
+                    </div>
+
+                    {/* 배너 위 텍스트 영역 - 두 번째 */}
+                    <div className={`
+                            absolute
+                            left-20
+                            bottom-40
+                        `}>
+                        <p className={`${bannerText01}`}>
+                            {banner.id2_title01}
+                        </p>
+                        <p className={`
+                            ${bannerText01}
+                            mt-0
+                            mb-8
+                        `}>
+                            <span className="text-[#FFD700] text-shadow">
+                                {banner.id2_highlight01}
+                            </span> 
+                            &nbsp;{banner.id2_title02}&nbsp;
+                            <span className="text-[#003399] text-shadow">
+                                {banner.id2_highlight02}
+                            </span>
+                        </p>
+                        <p className={`${bannerText02}`}>
+                            {banner.id2_text01}
+                        </p>
+                        <p className={`${bannerText02}`}>
+                            {banner.id2_text02}
+                        </p>
+                    </div>
+
+                    {/* 배너 위 텍스트 영역 - 세 번째 */}
+                    <div className={`
+                            absolute
+                            left-20
+                            bottom-40
+                        `}>
+                        <p className={`${bannerText01}`}>
+                            {banner.id3_title01}
+                        </p>
+                        <p className={`
+                            ${bannerText01}
+                            mt-0
+                            mb-8
+                        `}>
+                            {banner.id3_title02}
+                        </p>
+                        <p className={`${bannerText02}`}>
+                            {banner.id3_text01}
+                        </p>
+                        <p className={`${bannerText02}`}>
+                            {banner.id3_text02}
                         </p>
                     </div>
                 </SwiperSlide>
             ))}
-            <SwiperSlide>
-                <div className={
-                     `${bannerHeight}
-                     bg-green-500`
-                    }
-                >
-                    배너 02
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className={
-                     `${bannerHeight}
-                     bg-yellow-500`
-                    }
-                >
-                    배너 03
-                </div>
-            </SwiperSlide>
         </Swiper>
     )
 }
