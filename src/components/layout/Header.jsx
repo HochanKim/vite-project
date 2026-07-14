@@ -20,7 +20,8 @@ function Header() {
          mx-auto 
          flex 
          items-center 
-         justify-between py-4`
+         justify-between 
+         py-4`
        }
       >
         {/* 회사 로고 */}

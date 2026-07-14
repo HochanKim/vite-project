@@ -1,23 +1,21 @@
 import React from 'react';
 import slideBanners from '../../data/slideBanner.js';  // 슬라이드 배너에 적용할 컨텐츠 파일
 
-// ①  필요한 swiper 컴포넌트 가져오기
+// 필요한 swiper 컴포넌트 가져오기
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// ② 필요한 swiper 추가 스타일 가져오기
+// 필요한 swiper 추가 스타일 가져오기
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// ③ 사용할 기능(모듈) 가져오기
+// 사용할 기능(모듈) 가져오기
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// ④ CSS 설정
+// CSS 설정
 import '../../style/App.css';
 
-const bannerHeight = `
-    w-full
-    h-screen` /* h-screen = 'height: 100vh;' */;
+const bannerHeight =`w-full h-screen` /* h-screen = 'height: 100vh;' */;
 
 const bannerText01 =`
     font-semibold
@@ -48,7 +46,8 @@ function MyBanner() {
                 delay: 5000, // 5초마다 자동 슬라이드
                 disableOnInteraction: false, // 사용자가 드래그해도 자동 재생 유지
             }}
-            className={`${bannerHeight}
+            className={
+                `${bannerHeight}
                 mySwiper`
             }
         >
@@ -56,9 +55,7 @@ function MyBanner() {
             {slideBanners.map((banner) => (
                 <SwiperSlide 
                     key={banner.id}
-                    className={`
-                        relative
-                    `}
+                    className={`relative`}
                 >
                     {/* 컨텐츠 영역 (이미지 or 비디오) */}
                     {banner.type === "image"
@@ -93,6 +90,7 @@ function MyBanner() {
                             />
                         )
                     }
+                    
                     {/* 네이비 그라데이션 */}
                     <div
                         className="
