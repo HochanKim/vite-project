@@ -1,5 +1,5 @@
 import React from 'react';
-import slideBanners from '../../data/slideBanner.js';  // 슬라이드 배너에 적용할 컨텐츠 파일
+import slideBanners from '../../data/slideBanners.js';  // 슬라이드 배너에 적용할 컨텐츠 파일
 
 // 필요한 swiper 컴포넌트 가져오기
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -108,7 +108,7 @@ function MyBanner() {
                     <div className={`
                             absolute
                             left-20
-                            bottom-40
+                            bottom-20
                         `}>
                         <p className={`${bannerText01}`}>
                             {banner.id1_title01}
@@ -116,7 +116,7 @@ function MyBanner() {
                         <p className={`
                             ${bannerText01}
                             mt-0
-                            mb-8
+                            mb-6
                         `}>
                             <span className="text-[#BD9565] text-shadow">{banner.id1_highlight}</span> {banner.id1_title02}
                         </p>
@@ -129,11 +129,7 @@ function MyBanner() {
                     </div>
 
                     {/* 배너 위 텍스트 영역 - 두 번째 */}
-                    <div className={`
-                            absolute
-                            left-20
-                            bottom-40
-                        `}>
+                    <div className={`absolute left-20 bottom-20`}>
                         <p className={`${bannerText01}`}>
                             {banner.id2_title01}
                         </p>
@@ -162,7 +158,7 @@ function MyBanner() {
                     <div className={`
                             absolute
                             left-20
-                            bottom-40
+                            bottom-20
                         `}>
                         <p className={`${bannerText01}`}>
                             {banner.id3_title01}

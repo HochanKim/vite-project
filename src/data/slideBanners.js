@@ -3,7 +3,10 @@ import mainBanner01 from '../assets/main/usa_main01.mp4';
 import mainBanner02 from '../assets/main/europe01.jpg';
 import mainBanner03 from '../assets/main/top25_ceo_pc.png';
 
+
 const slideBanners = [
+  // 메인 페이지의 슬라이드 배너 영역에 넣을 컨텐츠 정보들 매핑
+  // 'MyBanner.jsx' 파일에 적용할 컴포넌트 영역
   {
     // 슬라이드 배너 1st
     id: 1,

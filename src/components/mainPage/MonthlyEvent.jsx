@@ -1,21 +1,39 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../common/Button.jsx';
+import monthEvent from '../../data/monthEvent.js';
 
 // CSS 설정
-const h1Tag = `
+const boxDesign = `
+    border 
+    border-black 
+    box-border 
+    w-49/100 
+    h-9/10`;
+
+const TitleTag = `
     text-4xl
     font-bold 
-    my-12`;
+    mb-8
+    whitespace-nowrap`;
 
 const bannerText01 =`
-    font-semibold
     text-4xl
-`;
+    font-semibold
+    whitespace-nowrap`;
 
 const bannerText02 =`
     font-medium
+    text-xl`;
+
+const eventText =`
+    font-medium
     text-xl
+    whitespace-nowrap`;
+
+const rightEvents = `
+    h-full
+    justify-between
 `;
 
 function MonthlyEvent() {
@@ -31,22 +49,15 @@ function MonthlyEvent() {
                 py-20`
             }
         >
-            <h1 className={`${h1Tag}`}>이달의 행사 안내</h1>
+            <h1 className={`${TitleTag}`}>이달의 행사 안내</h1>
             <div className={
                 `h-full
                  flex
-                 items-start 
+                 items-center 
                  justify-between`
             }>
-                <div className={
-                    `border 
-                    border-black 
-                    box-border 
-                    w-49/100 
-                    h-7/10
-                    relative
-                    p-6`
-                }>
+                {/* 섹션 좌측 영역 */}
+                <div className={`${boxDesign} relative p-6`}>
                     <div className={`my-8 block`}>
                         <p className={`${bannerText01}`}>
                             클럽이민이 제시하는
@@ -61,16 +72,39 @@ function MonthlyEvent() {
                     </p>
                     <Button 
                         onClick={() => moveTo("/support/event")}
-                        className={
-                            `absolute
-                            bottom-6
-                            left-6`
-                    }>
+                        className={`absolute bottom-6 left-6`}>
                         신청하기
                     </Button>
                 </div>
-                <div className={`border border-black box-border w-49/100 h-7/10`}>
 
+                {/* 섹션 우측 영역 */}
+                <div className={`${boxDesign} flex justify-between items-center pl-0 pt-6 pb-6 pr-6`}>
+                    {monthEvent.map((event) => (
+                        <>
+                            <div className={`${rightEvents} p-6`}>
+                                <h2 className={`${TitleTag}`}>
+                                    {event.title01}
+                                    <br />
+                                    {event.title02}
+                                </h2>  
+                                <Button variant="special" padding='px-3 py-1' className={`text-xl mb-2`}>
+                                    일시
+                                </Button>
+                                <p className={`${eventText} mb-6`}>
+                                    {event.yymmddtt}
+                                </p>
+                                <Button variant="special" padding='px-3 py-1' className={`text-xl mb-2`}>
+                                    장소
+                                </Button>
+                                <p className={`${eventText}`}>
+                                    {event.site}
+                                </p>
+                            </div>
+                            <div className={`${rightEvents}`}>
+                                <img src={event.src} className={`w-full h-full object-center object-scale-down`}/>
+                            </div>
+                        </>
+                    ))}
                 </div>
             </div>
         </section>

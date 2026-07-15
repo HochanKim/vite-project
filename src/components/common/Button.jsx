@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Button({
-    // 버튼에서 사용 할 파라미터 지정
+    // 버튼에서 사용 할 props 지정
     children,
     variant = "primary",
     size = "md",
@@ -9,30 +9,29 @@ function Button({
     onClick,
     type = "button",
     disabled = false,
+    padding = "px-6 py-3",
 }) {
 
     const styles = {
         // 기본적인 버튼 스타일 지정
         primary:
-            "bg-blue-800 hover:bg-blue-500 text-white",
+            "bg-blue-800 hover:bg-blue-500 text-white cursor-pointer",
         secondary:
-            "bg-white border border-gray-300 hover:bg-gray-100",
+            "bg-white border border-gray-300 hover:bg-gray-100 cursor-pointer",
         special:
-            "bg-[#ffd700] hover:bg-[#A98352] text-white"
+            "bg-[#ffd700] text-black rounded"
     }
 
     return(
         <button
             onClick={onClick}
             className={`
-                px-6
-                py-3
                 font-semibold
                 transition-all
                 duration-300
-                cursor-pointer
                 ${styles[variant]}
                 ${className}
+                ${padding}
             `}
         >
             {children}
