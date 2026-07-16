@@ -9,7 +9,7 @@ const monthEvent = [
         id: 1,
         type: "image",
         src: event01,
-
+        alt: '0718 행사 포스터',
         title01: "클럽이민 추천",
         title02: "CMB 프로젝트",
         yymmddtt: "07/18(토) 오후 2시",
