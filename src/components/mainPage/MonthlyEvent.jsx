@@ -18,8 +18,13 @@ const bannerText01 =`
     text-5xl
     font-semibold
     whitespace-nowrap`;
+    whitespace-nowrap`;
 
 const bannerText02 =`
+    font-medium
+    text-xl`;
+
+const eventText =`
     font-medium
     text-2xl`;
 
@@ -59,6 +64,7 @@ function MonthlyEvent() {
                     </p>
                     <Button 
                         onClick={() => moveTo("/support/event")}
+                        className={`absolute bottom-6 left-6`}>
                         className={`absolute bottom-6 left-6`}>
                         신청하기
                     </Button>
