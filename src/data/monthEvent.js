@@ -10,8 +10,9 @@ const monthEvent = [
         type: "image",
         src: event01,
         alt: '0718 행사 포스터',
-        title01: "클럽이민 추천",
-        title02: "CMB 프로젝트",
+
+        title01: "미국 투자이민",
+        title02: "CMB 추천 프로젝트",
         yymmddtt: "07/18(토) 오후 2시",
         site: "클럽이민(주) 본사 세미나실",
     },

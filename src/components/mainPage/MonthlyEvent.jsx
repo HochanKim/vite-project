@@ -21,7 +21,7 @@ const bannerText01 =`
 
 const bannerText02 =`
     font-medium
-    text-xl`;
+    text-2xl`;
 
 const eventText =`
     font-medium
@@ -69,7 +69,7 @@ function MonthlyEvent() {
                     {monthEvent.map((event) => (
                         <div key={event.id} className={`flex`}>
                             <div className={`${rightEvents} px-6`}>
-                                <h2 className='title-tag'>
+                                <h2 className='title-tag italic'>
                                     {event.title01}
                                     <br />
                                     {event.title02}
