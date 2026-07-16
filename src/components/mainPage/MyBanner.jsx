@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 // 사용할 기능(모듈) 가져오기
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-// CSS 설정
+// 공통 CSS 설정
 import '../../style/App.css';
 
 const bannerHeight =`w-full h-screen` /* h-screen = 'height: 100vh;' */;
@@ -63,15 +63,7 @@ function MyBanner() {
                     // type값이 "image"와 일치할 경우
                             <img src={banner.src} 
                                 alt={banner.type}
-                                className={`
-                                  w-full
-                                  h-full
-                                  absolute
-                                  inset-0
-                                  object-cover
-                                  object-center
-                                `}
-                            />
+                                className={`w-full h-full absolute inset-0 object-cover object-center`}/>
                     ) : (
                     // type값이 "image"와 다를 경우
                             <video src={banner.src} 
@@ -79,31 +71,13 @@ function MyBanner() {
                                 muted
                                 loop
                                 playsInline
-                                className={`
-                                  w-full
-                                  h-full
-                                  absolute
-                                  inset-0
-                                  object-cover
-                                  object-center
-                                `}
-                            />
+                                className={`w-full h-full absolute inset-0 object-cover object-center`}/>
                         )
                     }
                     
                     {/* 네이비 그라데이션 */}
-                    <div
-                        className="
-                            absolute
-                            inset-0
-
-                            bg-linear-to-r
-                            from-[#0B1F33]/90
-                            via-[#0B1F33]/50
-                            to-transparent
-                        "
-                    />
-
+                    <div className="absolute inset-0 bg-linear-to-r from-[#0B1F33]/90 via-[#0B1F33]/50 to-transparent" />
+                    
                     {/* 배너 위 텍스트 영역 - 첫 번째 */}
                     <div className={`
                             absolute

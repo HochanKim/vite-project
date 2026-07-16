@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../common/Button.jsx';
 import monthEvent from '../../data/monthEvent.js';
 
-// CSS 설정
+
+// 공통 CSS 설정
+import '../../style/App.css';
+
 const boxDesign = `
     border 
     border-black 
@@ -11,24 +14,18 @@ const boxDesign = `
     w-49/100 
     h-9/10`;
 
-const TitleTag = `
-    text-4xl
-    font-bold 
-    mb-8
-    whitespace-nowrap`;
-
 const bannerText01 =`
-    text-4xl
+    text-5xl
     font-semibold
     whitespace-nowrap`;
 
 const bannerText02 =`
     font-medium
-    text-xl`;
+    text-2xl`;
 
 const eventText =`
     font-medium
-    text-xl
+    text-2xl
     whitespace-nowrap`;
 
 const rightEvents = `
@@ -41,25 +38,15 @@ function MonthlyEvent() {
     const moveTo = useNavigate();
 
     return(
-        <section className={
-                `w-9/10
-                h-screen
-                mx-auto
-                box-border
-                py-20`
-            }
-        >
-            <h1 className={`${TitleTag}`}>이달의 행사 안내</h1>
-            <div className={
-                `h-full
-                 flex
-                 items-center 
-                 justify-between`
-            }>
+        <section className={`w-9/10 h-screen mx-auto box-border py-20`}>
+            {/* 섹션 타이틀 */}
+            <h1 className='title-tag'>이달의 행사 안내</h1>
+
+            <div className={`h-full flex items-center  justify-between`}>
                 {/* 섹션 좌측 영역 */}
                 <div className={`${boxDesign} relative p-6`}>
                     <div className={`my-8 block`}>
-                        <p className={`${bannerText01}`}>
+                        <p className={`${bannerText01} mb-5`}>
                             클럽이민이 제시하는
                         </p>
                         <p className={`${bannerText01}`}>
@@ -80,9 +67,9 @@ function MonthlyEvent() {
                 {/* 섹션 우측 영역 */}
                 <div className={`${boxDesign} flex justify-between items-center pl-0 pt-6 pb-6 pr-6`}>
                     {monthEvent.map((event) => (
-                        <>
-                            <div className={`${rightEvents} p-6`}>
-                                <h2 className={`${TitleTag}`}>
+                        <div key={event.id} className={`flex`}>
+                            <div className={`${rightEvents} px-6`}>
+                                <h2 className='title-tag'>
                                     {event.title01}
                                     <br />
                                     {event.title02}
@@ -100,10 +87,10 @@ function MonthlyEvent() {
                                     {event.site}
                                 </p>
                             </div>
-                            <div className={`${rightEvents}`}>
+                            <div>
                                 <img src={event.src} className={`w-full h-full object-center object-scale-down`}/>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>
