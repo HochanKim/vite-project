@@ -19,7 +19,9 @@ function Button({
         secondary:
             "bg-white border border-gray-300 hover:bg-gray-100 cursor-pointer",
         special:
-            "bg-[#ffd700] text-black rounded"
+            "bg-[#ffd700] text-black rounded",
+        long_button:
+            "bg-[#0B1F33] border border-white text-white hover:bg-white hover:text-[#0B1F33] cursor-pointer",
     }
 
     return(

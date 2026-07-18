@@ -79,11 +79,7 @@ function MyBanner() {
                     <div className="absolute inset-0 bg-linear-to-r from-[#0B1F33]/90 via-[#0B1F33]/50 to-transparent" />
                     
                     {/* 배너 위 텍스트 영역 - 첫 번째 */}
-                    <div className={`
-                            absolute
-                            left-20
-                            bottom-20
-                        `}>
+                    <div className={`absolute left-20 bottom-20`}>
                         <p className={`${bannerText01}`}>
                             {banner.id1_title01}
                         </p>
@@ -107,11 +103,7 @@ function MyBanner() {
                         <p className={`${bannerText01}`}>
                             {banner.id2_title01}
                         </p>
-                        <p className={`
-                            ${bannerText01}
-                            mt-0
-                            mb-8
-                        `}>
+                        <p className={`${bannerText01} mt-0 mb-8`}>
                             <span className="text-[#FFD700] text-shadow">
                                 {banner.id2_highlight01}
                             </span> 
@@ -129,19 +121,11 @@ function MyBanner() {
                     </div>
 
                     {/* 배너 위 텍스트 영역 - 세 번째 */}
-                    <div className={`
-                            absolute
-                            left-20
-                            bottom-20
-                        `}>
+                    <div className={`absolute left-20 bottom-20`}>
                         <p className={`${bannerText01}`}>
                             {banner.id3_title01}
                         </p>
-                        <p className={`
-                            ${bannerText01}
-                            mt-0
-                            mb-8
-                        `}>
+                        <p className={`${bannerText01} mt-0 mb-8`}>
                             {banner.id3_title02}
                         </p>
                         <p className={`${bannerText02}`}>

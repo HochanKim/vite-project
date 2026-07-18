@@ -28,7 +28,7 @@ function Header() {
                   </span>
                 </Link>
                 {/* 서브 메뉴 */}
-                <ul className='absolute top-full left-1/2 -translate-x-1/2 min-w-maxbg-white 
+                <ul className='absolute top-full left-1/2 -translate-x-1/2 min-w-max bg-white 
                   rounded-xl shadow-lg
                   invisible opacity-0
                   group-hover:visible group-hover:opacity-100
