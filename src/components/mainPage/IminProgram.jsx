@@ -11,19 +11,21 @@ function IminProgram() {
             <div className={`w-9/10 h-screen mx-auto box-border py-20 relative`}>
                 <h1 className='title-tag text-white'>이민 프로그램 안내</h1>
                 <Button variant="long_button" className={`absolute top-20 right-0`}>전체 프로그램 보기 →</Button>
-                <div className={`flex justify-between items-center pl-0 pt-6 pb-6 pr-6`}>
+                <div className={`flex justify-between items-center px-0 py-6 box-border`}>
                     {iminPrograms.map((program) => (
-                        <div key={program.id} className={`w-1/4`}>
+                        <div key={program.id} className={`w-6/25 h-full`}>
                             <img src={program.src} alt={program.alt}/>
-                            <h2>
-                                {program.title}
-                            </h2>  
-                            <p>
-                                {program.script}
-                            </p>
-                            <p>
-                                {program.move} →
-                            </p>
+                            <div className={`bg-white p-4`}>
+                                <h2 className={`text-2xl font-semibold mb-2`}>
+                                    {program.title}
+                                </h2>  
+                                <p className={`mb-20 text-xl`}>
+                                    {program.script}
+                                </p>
+                                <p>
+                                    {program.move} →
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>

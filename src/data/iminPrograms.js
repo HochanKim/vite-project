@@ -18,6 +18,36 @@ const iminPrograms = [
     script: "합법적인 투자로 미국 영주권 취득 및 자녀 교육, 사업의 기회 확보",
     move: "자세히 보기",
   },
+  {
+    // 캐나다 이민
+    id: 2,
+    src: canadaPic,
+    alt: "캐나다 이미지",
+
+    title: "캐나다 이민",
+    script: "안정적인 캐나다 영주권 기회와 다양한 교육 및 비즈니스 기회",
+    move: "자세히 보기",
+  },
+  {
+    // 유럽 이민
+    id: 3,
+    src: europePic,
+    alt: "유럽 이미지",
+
+    title: "유럽 투자이민",
+    script: "장기 거주증 확보와 자유로운 이동, 삶의 질을 높이는 최적의 선택",
+    move: "자세히 보기",
+  },
+  {
+    // 아시아 프로그램
+    id: 4,
+    src: asiaPic,
+    alt: "유럽 이미지",
+
+    title: "아시아 거주비자",
+    script: "아시아 주요국 거주비자 취득으로 글로벌 비즈니스 확장",
+    move: "자세히 보기",
+  },
 ];
 
 export default iminPrograms;
