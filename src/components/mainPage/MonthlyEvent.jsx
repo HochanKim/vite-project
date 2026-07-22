@@ -33,6 +33,7 @@ const rightEvents = `
     justify-between
 `;
 
+
 function MonthlyEvent() {
     // useNavigate를 활용한 페이지 이동
     const moveTo = useNavigate();
@@ -65,8 +66,10 @@ function MonthlyEvent() {
                 </div>
 
                 {/* 섹션 우측 영역 */}
-                <div className={`${boxDesign} flex justify-between items-center pl-0 pt-6 pb-6 pr-6`}>
-                    {monthEvent.map((event) => (
+                <div className={`${boxDesign} flex justify-around items-center pl-0 pt-6 pb-6 pr-6`}>
+                    {/* 홍보 중인 행사의 날짜가 지나면 데이터의 'event.id' 값의 숫자를 바꾸면서 월 행사 홍보를 진행
+                    => 저장된 데이터의 파일은 'monthEvent.js (경로: C:\Users\ghcks\Desktop\react\vite-project\src\data)' */}
+                    {monthEvent.filter(event => event.id === 2).map((event) => ( 
                         <div key={event.id} className={`flex`}>
                             <div className={`${rightEvents} px-6`}>
                                 <h2 className='title-tag italic'>
@@ -88,7 +91,7 @@ function MonthlyEvent() {
                                 </p>
                             </div>
                             <div>
-                                <img src={event.src} alt={event.alt} className={`w-full h-full object-center object-scale-down`}/>
+                                <img src={event.src} alt={event.alt} className={`w-70 h-80 object-center object-scale-down`}/>
                             </div>
                         </div>
                     ))}
