@@ -60,12 +60,12 @@ function MyBanner() {
                     {/* 컨텐츠 영역 (이미지 or 비디오) */}
                     {banner.type === "image"
                      ? (
-                    // type값이 "image"와 일치할 경우
+                    // type값이 "image"와 일치할 경우 (True)
                             <img src={banner.src} 
                                 alt={banner.type}
                                 className={`w-full h-full absolute inset-0 object-cover object-center`}/>
                     ) : (
-                    // type값이 "image"와 다를 경우
+                    // type값이 "image"와 다를 경우 (False)
                             <video src={banner.src} 
                                 autoPlay
                                 muted

@@ -11,6 +11,7 @@ const iminPrograms = [
   {
     // 미국 이민
     id: 1,
+    link: "/region/usa",
     src: usaPic,
     alt: "미국 이미지",
 
@@ -21,6 +22,7 @@ const iminPrograms = [
   {
     // 캐나다 이민
     id: 2,
+    link: "/region/canada",
     src: canadaPic,
     alt: "캐나다 이미지",
 
@@ -31,6 +33,7 @@ const iminPrograms = [
   {
     // 유럽 이민
     id: 3,
+    link: "/region/europe",
     src: europePic,
     alt: "유럽 이미지",
 
@@ -41,8 +44,9 @@ const iminPrograms = [
   {
     // 아시아 프로그램
     id: 4,
+    link: "/region/asia",
     src: asiaPic,
-    alt: "유럽 이미지",
+    alt: "아시아 이미지",
 
     title: "아시아 거주비자",
     script: "아시아 주요국 거주비자 취득으로 글로벌 비즈니스 확장",

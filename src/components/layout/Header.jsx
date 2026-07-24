@@ -19,10 +19,8 @@ function Header() {
         <nav className="flex-1 flex justify-center">
           <ul className='flex gap-8'>
             {menuData.map((menu) => (
-              <li key={menu.id}
-                className='relative group text-center whitespace-nowrap font-bold'>
-                <Link to={menu.link}
-                  className='block px-4 py-3'>
+              <li key={menu.id} className='relative group text-center whitespace-nowrap font-bold'>
+                <Link to={menu.link} className='block px-4 py-3'>
                   <span className='group-hover:text-blue-500 transition-colors duration-300'>
                     {menu.title}
                   </span>
