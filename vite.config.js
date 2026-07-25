@@ -8,4 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/vite-project/', // GitHub Pages에서 사용할 경로
 })
