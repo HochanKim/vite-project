@@ -3,9 +3,21 @@
 import event01 from '../assets/event/260718-seminar.jpg';
 import event02 from '../assets/event/260730-seminar.jpg';
 
-const monthEvent = [
+// 월간 행사 한 개의 데이터 형태
+export interface MonthEventItem {
+    id: number;
+    type: "image";
+    src: string;      // 포스터 이미지 경로
+    alt: string;
+    title01: string;
+    title02: string;
+    yymmddtt: string; // 일시
+    site: string;     // 장소
+}
+
+const monthEvent: MonthEventItem[] = [
     // 월간 행사들의 데이터 매핑 (상수로 선언)
-    // 'MonthlyEvent.jsx' 파일에 적용할 컴포넌트 영역
+    // 'MonthlyEvent.tsx' 파일에 적용할 컴포넌트 영역
     {
         // 월간 행사 01
         id: 1,

@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../common/Button.jsx';
-import monthEvent from '../../data/monthEvent.js';
+import Button from '../common/Button';
+import monthEvent from '../../data/monthEvent';
 
 
 // 공통 CSS 설정
@@ -68,7 +67,7 @@ function MonthlyEvent() {
                 {/* 섹션 우측 영역 */}
                 <div className={`${boxDesign} flex justify-around items-center pl-0 pt-6 pb-6 pr-6`}>
                     {/* 홍보 중인 행사의 날짜가 지나면 데이터의 'event.id' 값의 숫자를 바꾸면서 월 행사 홍보를 진행
-                    => 저장된 데이터의 파일은 'monthEvent.js (경로: C:\Users\ghcks\Desktop\react\vite-project\src\data)' */}
+                    => 저장된 데이터의 파일은 'monthEvent.ts (경로: C:\Users\ghcks\Desktop\react\vite-project\src\data)' */}
                     {monthEvent.filter(event => event.id === 2).map((event) => ( 
                         <div key={event.id} className={`flex`}>
                             <div className={`${rightEvents} px-6`}>

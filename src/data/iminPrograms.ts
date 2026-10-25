@@ -4,10 +4,20 @@ import canadaPic from '../assets/main/canada01.jpg';
 import europePic from '../assets/main/europe02.jpg';
 import asiaPic from '../assets/main/asia01.jpg';
 
+// 이민 프로그램 카드 한 개의 데이터 형태
+export interface IminProgramItem {
+  id: number;
+  link: string;   // 클릭 시 이동할 경로
+  src: string;    // 이미지 경로
+  alt: string;
+  title: string;
+  script: string; // 설명 문구
+  move: string;   // 하단 이동 문구
+}
 
-const iminPrograms = [
+const iminPrograms: IminProgramItem[] = [
   // 이민 프로그램 섹션에 넣을 컨텐츠 정보들 매핑
-  // 'IminProgram.jsx' 파일에 적용할 컴포넌트 영역
+  // 'IminProgram.tsx' 파일에 적용할 컴포넌트 영역
   {
     // 미국 이민
     id: 1,

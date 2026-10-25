@@ -1,6 +1,5 @@
-import React from 'react';
-import Button from '../common/Button.jsx';
-import iminPrograms from '../../data/iminPrograms.js'; // 이민 프로그램 섹션에 적용할 컨텐츠 파일
+import Button from '../common/Button';
+import iminPrograms from '../../data/iminPrograms'; // 이민 프로그램 섹션에 적용할 컨텐츠 파일
 import { Link } from "react-router-dom";
 
 // 공통 CSS 설정

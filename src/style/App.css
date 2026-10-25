@@ -1,6 +1,6 @@
 @import "tailwindcss"; /* tailwindcss 설치 */
 
-/* MyBanner.jsx 스타일 적용 */
+/* MyBanner.tsx 스타일 적용 */
 .mySwiper .swiper-pagination-bullet {
 /* 슬라이드 배너의 이동 버튼 */
     width:60px;

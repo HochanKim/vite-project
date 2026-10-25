@@ -1,5 +1,4 @@
-import React from 'react';
-import slideBanners from '../../data/slideBanners.js';  // 슬라이드 배너에 적용할 컨텐츠 파일
+import slideBanners from '../../data/slideBanners';  // 슬라이드 배너에 적용할 컨텐츠 파일
 
 // 필요한 swiper 컴포넌트 가져오기
 import { Swiper, SwiperSlide } from 'swiper/react';

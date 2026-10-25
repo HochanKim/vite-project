@@ -1,5 +1,19 @@
- // 헤더 영역의 메뉴들의 데이터 매핑 모음 ('Header.jsx'에서 사용)
-const menuData = [
+ // 헤더 영역의 메뉴들의 데이터 매핑 모음 ('Header.tsx'에서 사용)
+// 서브 메뉴 한 개의 데이터 형태
+export interface SubMenuItem {
+  title: string;
+  link: string;
+}
+
+// 메인 메뉴 한 개의 데이터 형태
+export interface MenuItem {
+  id: number;
+  title: string;
+  link: string;
+  subMenus: SubMenuItem[];
+}
+
+const menuData: MenuItem[] = [
   {
     // 헤더 1st 메인 메뉴
     id: 1,
